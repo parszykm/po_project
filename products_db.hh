@@ -5,6 +5,6 @@
 
 class ProductsDatabase{
     public:
-    static std::vector<Product> products_database;
+        static std::vector<Product> products_database;
 
 };
