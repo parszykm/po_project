@@ -12,7 +12,7 @@ void DeletePromo::exec(){
     auto it=find_if(PromoDatabase::promotion_database.begin(),PromoDatabase::promotion_database.end(),[&id](const Promotion obj){return obj.promo_id==id;});
     if(it != PromoDatabase::promotion_database.end()){
         
-        auto it2=find_if(ProductsDatabase::products_database.begin(),ProductsDatabase::products_database.end(),[it](const Product obj){return obj.id==it->id;});
+        auto it2=find_if(ProductsDatabase::products_database.begin(),ProductsDatabase::products_database.end(),[&it](const Product obj){return obj.id==it->id;});
         if(it2!=ProductsDatabase::products_database.end()){ 
             it2->price+=it->promo;
 

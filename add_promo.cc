@@ -18,6 +18,8 @@ void AddPromo::exec(){
     price=std::stoi(s_price);
     auto it=find_if(ProductsDatabase::products_database.begin(),ProductsDatabase::products_database.end(),[&id](const Product& obj){return obj.id == id;});
     Promotion tmp(it->name,it->price,it->creation_date);
+    tmp.id=it->id;
+    
     if(it->price-price<0){  
         tmp.promo=it->price;
         it->price=0;
