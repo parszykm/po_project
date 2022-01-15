@@ -8,7 +8,8 @@ class Product{
         std::string name;
         int price;
         std::string creation_date;
-        Product(std::string name, std::string date, int price ): id(this->count), name(name),price(price),creation_date(date){}
+        int stock;
+        Product(std::string name, std::string date, int price, int stock ): id(this->count), name(name),price(price),creation_date(date), stock(stock){}
 
         
 };
