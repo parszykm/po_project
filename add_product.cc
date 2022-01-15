@@ -23,11 +23,8 @@ void AddProduct::exec(){
     std::stringstream ss(s_price);
     ss>>price;
     dt.erase(dt.end()-1,dt.end());
-    Product tmp;
-    tmp.id=tmp.count++;
-    tmp.name=name;
-    tmp.creation_date=dt;
-    tmp.price=price;
+    Product tmp(name,dt,price);
+    tmp.count++;
     ProductsDatabase::products_database.push_back(tmp);
     std::cout<<"Product Added\n>";
 
