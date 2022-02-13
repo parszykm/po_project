@@ -1,6 +1,6 @@
 #pragma once
-
 #include"command.hh"
-class ExitCommand: public Command{
+class Filter:public Command{
+
     void exec();
 };

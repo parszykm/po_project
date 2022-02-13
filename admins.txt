@@ -1,0 +1,3 @@
+admin1:hadmin1
+admin2:hadmin2
+admin3:hadmin3
